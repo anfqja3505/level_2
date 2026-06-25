@@ -1,0 +1,70 @@
+/* properies.css */
+
+.movie {
+    width: 450px;
+    height: 1200px;
+    background-color: #fdffc5;
+    padding: 0 15px;
+}
+
+/* =================1.포스터================= */
+
+.movie > .poster {
+    margin-bottom: 30px;
+}
+.movie > .poster > img {}
+
+/* =================2.제목+정보================= */
+
+.movie > .title_info_wrap {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+}
+.movie > .title_info_wrap > .title_age {
+    display: flex;
+    gap: 10px;
+}
+.movie > .title_info_wrap > .title_age > h1 {
+    font-family: 'pretendard', '맑은 고딕';
+    font-size: 1.75em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 15px;
+}
+.movie > .title_info_wrap > .title_age > .age {}
+.movie > .title_info_wrap > .title_age > .age > img {
+    width: 30px;
+}
+.movie > .title_info_wrap > .info {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 15px;
+}
+.movie > .title_info_wrap > .info > .date {
+    font-family: 'pretendard', '맑은 고딕';
+    font-size: 0.875em;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+.movie > .title_info_wrap > .info > .border {
+    font-family: 'pretendard', '맑은 고딕';
+    font-size: 0.875em;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+.movie > .title_info_wrap > .info > .running_time {
+    font-family: 'pretendard', '맑은 고딕';
+    font-size: 0.875em;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+/* =================3.줄거리================= */
+.movie > .story {
+    font-family: 'pretendard', '맑은 고딕';
+    line-height: 1.7;
+    letter-spacing: -0.02em;
+}
+
+
+
