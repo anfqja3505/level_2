@@ -1,0 +1,169 @@
+/* table_01.css */
+/* 공통 */
+h1 {
+    font-size:1.2em;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 8px;
+}
+table {
+    /* margin: 8px 10px 20px; */
+    /* padding: 15px; */
+}
+table td {
+    /* padding: 15px */
+}
+/* 개별 */
+#t1 {
+    border: 1px solid #000;
+}
+#t2 {
+    border: 4px solid #f00;
+}
+#t2 tr td { /* ID=t2 요소 안 tr 요소 안 td를 선택한다. */
+    border: 2px solid #00f;
+}
+/* 자식선택자(>)는 특정부모 안 자식,자손요소가 2개 이상 중복될때 자식만 선택하기 위해서만 사용한다. */
+#t3 tr * {
+    border: 1px solid #000;
+}
+#t3 tr:nth-child(1) th {
+    background-color: yellow;
+}
+#t3 tr:nth-child(1) td:nth-child(2) {
+    background-color: pink;
+}
+#t3 tr:nth-child(2) td:nth-child(1) {
+    background-color: lime;
+}
+#t3 tr:nth-child(2) td:nth-child(3) {
+    background-color: aqua;
+}
+#book_stock {
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    overflow: hidden;
+}
+#book_stock tr {}
+#book_stock tr:nth-child(1) {
+    background-color: #FF0066;
+}
+#book_stock tr:nth-child(3) {
+    border: 2px solid #FF0066;
+}
+#book_stock tr th {
+    width: 100px;
+    font-family: 'pretenderd';
+    font-size: 1.125em;
+    font-weight: 500;
+    color: #fff;
+}
+#book_stock tr th:nth-child(1) {
+    width: 250px;
+}
+#book_stock tr td {
+    text-align: center;
+    font-family: 'pretendard';
+}
+/* (아래)선택자 해석 : 각 행(tr)의 첫번째(nth) td 선택 */
+#book_stock tr td:nth-child(1) {
+    text-align: left;
+    padding-left: 16px;
+}
+#book_stock tr:nth-child(3) td {
+    color: #FF0066;
+}
+/* td, th  열 선택자에 동시 패딩 적용 */
+/* tr의 자식은 td,tr만 올 수 있다. 만약 열태 그에 다른 a 등의 태그를 쓸 경우 tr * 라고 쓰면 a 태그 까지 잡히므로 tr > *로 써서 td, th만 잡는 용도로 사용할 수 있다.*/
+#book_stock tr > * {
+    padding: 16px 0;
+}
+/* ========================================지역매출현황 */
+.area_wrap {
+    width :750px;
+}
+
+.area_wrap .sale_title {
+    padding: 12px 0;
+    display: flex; /* 오토레이아웃 */
+    flex-flow: row nowrap; /* 오토레이아웃 흐름(가로,줄바꿈x) */
+    justify-content: space-between; /* 간격 자동 */
+}
+.area_wrap .sale_title h2 {
+    font-family: Noto-Sans-KR;
+    font-size: 1.125em;
+    font-weight: 700;
+}
+.area_wrap .sale_title p {
+    font-family: Noto-Sans-KR;
+    font-size: 0.938em;
+    font-weight: 500;
+}
+.area_wrap #sale_status {
+    background-color: #F5F5F5;
+}
+.area_wrap #sale_status tr {}
+.area_wrap #sale_status tr:nth-child(1) {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.area_wrap #sale_status tr:nth-child(5) {
+    background-color: #A8D18D;
+}
+.area_wrap #sale_status tr th {
+    width: 150px; height: 32px;
+    font-family: Noto-Sans-KR;
+    font-weight: 500;
+}
+.area_wrap #sale_status tr td {
+    text-align: center;
+    padding: 16px 0;
+    font-family: Noto-Sans-KR;
+    line-height: 1.3;
+}
+.area_wrap .src {
+    padding: 10px 0;
+    font-family: Noto-Sans-KR;
+    font-weight: 500;
+    text-align: right;
+    /* width: 750px; */
+}
+/* =======================================행열합치기 연습용 */
+#t4 {
+    margin: 24px;
+}
+#t4 * {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 6px;
+}
+/* =====================================선불요금제 */
+#pay {
+    width: 1100px;
+    background-color: #f2f2f2;
+    margin: 30px;
+}
+#pay tr {}
+#pay tr:nth-child(1) {
+    border-top: 2px solid #000;
+    border-bottom: 1px dashed #000;
+}
+#pay tr:nth-child(2) {
+    border-bottom: 2px solid #000;
+}
+#pay tr th {}
+#pay tr > * {
+    padding: 12.5px 33px;
+}
+#pay tr th img {}
+#pay tr th h2 {}
+#pay tr th P {}
+#pay tr td {
+    text-align: center;
+}
+#pay tr td:nth-child(1) {
+    width: 250px;
+}
+#pay tr td:nth-child(3) {
+    width: 350px;
+}
+
